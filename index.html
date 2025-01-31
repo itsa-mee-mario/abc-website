@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+    <title>Ashoka Business Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/tachyons/css/tachyons.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@700&family=Poppins&family=Cardo&display=swap" rel="stylesheet">
+    <style type="text/css">
+    :root {
+        --brand-teal: #196976;
+        --brand-purple: #593f5e;
+        --brand-gray: #4b4b4b;
+    }
+
+    h1, h2, h3, nav a {
+        font-family: 'Montserrat', 'Inter', Agrandir, sans-serif;
+        font-weight: 700;
+        color: var(--brand-gray);
+    }
+
+    body, p {
+        font-family: 'Poppins', 'Cardo', 'Times New Roman', sans-serif;
+        color: var(--brand-gray);
+    }
+
+    .baskerville, .avenir {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .toggle-checked:not(:checked) ~ .toggle-target {
+      display: none;
+    }
+    .toggle-checked:checked ~ .toggle-target {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 9999;
+    }
+
+    /* Modal content styles */
+    .modal-content {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background-color: var(--washed-blue);
+    }
+
+    /* Close button positioning */
+    .modal-close {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 10000;
+    }
+
+
+    </style>
+    <body>
+        <header class="bg-white black-80 tc pv4 avenir">
+
+            <img src="abclogo.png" class="dib w4 h4 br-50" alt="ABC">
+
+            <h1 class="mt2 mb0 baskerville i fw1 f1">Ashoka Business Club</h1>
+            <h2 class="mt2 mb0 f6 fw4 ttu tracked"></h2>
+            <nav class="bt bb tc mw7 center mt4">
+                <a
+                    class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l"
+                    href="/abr-website/articles.html"
+                    >Newsletter</a
+                >
+                <a
+                    class="f6 f5-l link bg-animate black-80 hover-bg-light-red dib pa3 ph4-l"
+                    href="https://heyzine.com/flip-book/6de8b6ac08.html"
+                    >ABR</a
+                >
+                <a
+                    class="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l"
+                    href="/abr-website/internships.html"
+                    >Internships</a
+                >
+                <a
+                    class="f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph4-l"
+                    href="/games"
+                    >Games</a
+                >
+                <a
+                    class="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l"
+                    href="/abr-website/team.html"
+                    >Our Team</a
+                >
+            </nav>
+        </header>
+
+        <article class="cf ph3 ph5-ns pv5 tr center">
+            <header class="fn fl-ns w-50-ns pr4-ns">
+                <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+                    War : It's Just Good Business?
+                </h1>
+                <h2 class="f3 mid-gray lh-title">
+                    A summary of the ABR article
+                </h2>
+                <time class="f6 ttu tracked gray">By Karmanya Wahi</time>
+            </header>
+            <div class="fn fl-ns w-50-ns">
+                <p class="f5 tl lh-copy measure mt0-ns">
+                    The ongoing Russia-Ukraine war has led to unprecedented
+                    shifts in global military spending and innovation. With
+                    military expenditure reaching $2.4 trillion in 2023, a surge
+                    in investment has fueled the growth of dsefense start-ups,
+                    particularly in AI, machine learning, and drones. These
+                    innovations, exemplified by companies like Shield AI and
+                    Anduril Technologies, are revolutionizing military
+                    operations and shaping the future of warfare. Venture
+                    capital, traditionally reserved for Silicon Valley’s tech
+                    giants, has flooded into defense industries, signaling a
+                    paradigm shift. As the war unfolds, the convergence of
+                    military needs and technological innovation is not only
+                    reshaping defense but also paving the way for broader
+                    applications of emerging technologies in sectors such as
+                    agriculture and healthcare.
+                </p>
+            </div>
+        </article>
+
+
+        <article class="mw7 center ph3 ph5-ns tc br2 pv5 bg-washed-green dark-green mb5">
+          <h1 class="fw6 f3 f2-ns lh-title mt0 mb3">
+              Field Trip to The Times of India Press
+          </h1>
+          <h2 class="fw2 f4 lh-copy mt0 mb3">
+               Friday, 24th January 2025
+              11:00 AM - 2:00 PM
+          </h2>
+          <!-- <p class="fw1 f5 mt0 mb3">
+            Sign up or learn more
+          </p> -->
+          <div>
+            <a class="f6 br-pill bg-dark-green no-underline washed-green ba b--dark-green grow pv2 ph3 dib mr3"
+              href="https://forms.gle/B9VPH8aN4h8Ykmb67">
+              Sign Up
+            </a>
+            <label class="f6 br-pill dark-green no-underline ba grow pv2 ph3 dib" for="trigger" class="f6 link dim br3 ph3 pv2 mb2 db white bg-black pointer"
+            >
+              Learn More
+            </label>
+
+
+          </div>
+        </article>
+
+
+        <div id="modal-group" class="sans-serif">
+          <input type="checkbox" id="trigger" class="toggle-checked clip"/>
+          <div class="toggle-target bg-washed-blue">
+            <div class="modal-content">
+              <article>
+                <header class="bg-gold sans-serif">
+                  <div class="mw9 center pa4 pt5-ns ph7-l">
+                    <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
+                      <span class="bg-black-90 lh-copy white pa1 tracked-tight">
+                        Field Trip: Times of India Press
+                      </span>
+                    </h3>
+                  </div>
+                </header>
+                <div class="pa4 ph7-l georgia mw9-l center">
+                    <div class="fl w-100 w-75-l pv0 mv0">
+                        <div class="fl w-100 mb2 mb4-l">
+                            <div
+                                class="cover pv5 pv6-l"
+                                style="
+                                    background: black
+                                        url(http://mrmrs.github.io/photos/u/001.jpg)
+                                        center;
+                                "
+                            ></div>
+                        </div>
+
+                    <article class="cf ph3 ph5-ns pv5">
+                      <header class="fn fl-ns w-50-ns pr4-ns">
+                        <h1 class="mb3 mt0 lh-title">Itenary</h1>
+
+                      </header>
+                      <div class="fn fl-ns w-50-ns">
+
+                            <p>Introductory Session  </p>
+                            <p>Plant Visit </p>
+                            <p>Lunch</p>
+
+
+                      </div>
+                    </article>
+
+                    <article class="cf ph3 ph5-ns pv5">
+                      <header class="fn fl-ns w-50-ns pr4-ns">
+                        <h1 class="mb3 mt0 lh-title">Location</h1>
+
+                      </header>
+                      <div class="fn fl-ns w-50-ns">
+                          Times of India Press, Plot No. 13/1, Sahibabad Industrial Area, Site 4, Sahibabad, Ghaziabad, Uttar Pradesh, Near Banana Tree Hotel
+                          Distance from Ashoka: 68 km (~1.5 hours)
+
+                      </div>
+                    </article>
+
+                    <article class="cf ph3 ph5-ns pv5">
+                      <header class="fn fl-ns w-50-ns pr4-ns">
+                        <h1 class="mb3 mt0 lh-title">Timeline</h1>
+
+                      </header>
+                      <div class="fn fl-ns w-50-ns">
+
+                            <p>Departure from Campus: 9:15 AM</p>
+                            <p>Arrival at TOI Plant: 11:00 AM</p>
+                            <p>Departure from TOI Plant: 2:00 PM</p>
+                            <p>Arrival at Campus: 3:30 PM</p>
+
+                      </div>
+                    </article>
+
+                    <article class="cf ph3 ph5-ns pv5">
+                      <header class="fn fl-ns w-50-ns pr4-ns">
+                        <h1 class="mb3 mt0 lh-title">Guidelines</h1>
+
+                      </header>
+                      <div class="fn fl-ns w-50-ns">
+                          <p> Attire: Shoes are mandatory.  </p>
+                          <p>Commitment: Please ensure you can attend the entire event before registering. Backing out at the last moment disrupts the planning and will result in disqualification from future Ashoka Business Club events. </p>
+
+                      </div>
+                    </article>
+                </div>
+              </article>
+              <label class="modal-close pa4 b f4 pointer black" for="trigger">Close</label>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <div class="pa4-m">
+            <form class="bg-light-red mw7 center pa4 br2-ns ba b--black-10">
+                <fieldset class="cf bn ma0 pa0">
+                    <legend class="pa0 f5 f4-ns mb3 white-80">
+                        Sign up for our newsletter
+                    </legend>
+                    <div class="cf">
+                        <label class="clip" for="email-address"
+                            >Email Address</label
+                        >
+                        <input
+                            class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns"
+                            placeholder="Your Email Address"
+                            type="text"
+                            name="email-address"
+                            value=""
+                            id="email-address"
+                        />
+                        <input
+                            class="f6 f5-l button-reset fl pv3 tc bn bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns"
+                            type="submit"
+                            value="Subscribe"
+                        />
+                    </div>
+                </fieldset>
+            </form>
+        </div> -->
+
+        <main
+            class="w-100 cf helvetica dark-gray bg-white pa3 pa4-m pa5-l mw9 center"
+        >
+            <div class="fl w-50 pr2 pr3-l mb3 mb4-l">
+                <div
+                    class="cover pv5 pv6-m pv7-l"
+                    style="
+                        background: black
+                            url(https://thumbs.dreamstime.com/b/image-person-standing-pile-coins-banknotes-symbolizing-idea-financial-wealth-success-features-represents-277221038.jpg) center;
+                    "
+                ></div>
+            </div>
+            <div class="fl w-50 w-25-l pl2 pr2-m ph2-l mb3 mb4-l">
+                <div
+                    class="cover pv5 pv6-m pv7-l"
+                    style="
+                    background: black
+                        url(https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0) center;
+                    "
+                ></div>
+            </div>
+            <div class="fl w-50 w-50 w-25-l pr2 pr0-l pl3-l mb3 mb4-l">
+                <div
+                    class="cover pv5 pv6-m pv7-l"
+                    style="
+                        background: black
+                            url(https://i.huffpost.com/gen/2056846/images/o-WEALTH-facebook.jpg) left;
+                    "
+                ></div>
+            </div>
+            <div class="fl w-50 w-50 w-25-l pl2 pl0-l pr2-m pr4-l mb3 mb4-l">
+                <div
+                    class="cover pv5 pv6-m pv7-l"
+                    style="
+                        background: black
+                            url(https://wealthandfinance.digital/wp-content/uploads/2022/12/well-im-n.jpg) center;
+                    "
+                ></div>
+            </div>
+            <div class="fl w-100 w-50-l pr2-l pl2-ns mb4 mb0-l mb4 outline">
+                <div class="pa4">
+                    <h1 class="f4 f2-l fw7 mt0 pv3-l bb-l bb--black">#003</h1>
+                    <p class="lh-copy mt2 mt3-m mt5-l f6">
+                        <span class="db-ns f6 fw7 lh-solid mb3 mb0-m mb4-l"
+                            >-Henry David Thoreau, said:</span
+                        >
+                        <span class="fw9 f6 f1-l db lh-title mb3 mb4-l"
+                            >"Wealth is the ability to fully experience life."
+                        </span>
+                        <span class="db-l measure-wide">
+                            Read about exciting emerging sectors- from
+                            semiconductors to blended fuels, and iconic cultural
+                            phenomena like the Super Bowl adverts and
+                            investment-driven migration, revealing how financial
+                            systems propel growth and opportunity, on the latest
+                            edition of ABR.
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="cf">
+                <div class="fl w-100 w-25-l pl3-l mb3 mb4-l">
+                    <div
+                        class="cover pv5 pv6-m pv7-l"
+                        style="
+                            background: black
+                                url(http://mrmrs.github.io/photos/051.jpg)
+                                center;
+                        "
+                    ></div>
+                </div>
+             <!-- --
+                    <div class="pa4">
+                        <blockquote
+                            class="athelas ml0 mt0 pl4 black-90 bl bw2 b--blue"
+                        >
+                            <p class="f5 f4-m f3-l lh-copy measure mt0">
+                                Discipline in typography is a prime virtue.
+                                Individuality must be secured by means that are
+                                rational. Distinction needs to be won by
+                                simplicity and restraint. It is equally true
+                                that these qualities need to be infused wiht a
+                                certain spirit and vitality, or they degenerate
+                                into dullness and mediocrity.
+                            </p>
+                            <cite class="f6 ttu tracked fs-normal">
+                                <main class="mw6 center">
+                                    <article
+                                        class="dt w-100 bb b--black-05 pb2 mt2"
+                                        href="#0"
+                                    >
+                                        <div class="dtc w2 w3-ns v-mid">
+                                            <img
+                                                src="http://mrmrs.github.io/photos/p/2.jpg"
+                                                class="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"
+                                            />
+                                        </div>
+                                        <div class="dtc v-mid pl3">
+                                            <h1
+                                                class="f6 f5-ns fw6 lh-title black mv0"
+                                            >
+                                                Young Gatchell
+                                            </h1>
+                                            <h2 class="f6 fw4 mt0 mb0 black-60">
+                                                @yg
+                                            </h2>
+                                        </div>
+                                    </article>
+                                </main></cite
+                            >
+                        </blockquote>
+                    </div> -->
+
+
+                </div>
+<!--
+                <div class="fl w-100 w-75-l pv0 mv0">
+                    <div class="fl w-100 mb2 mb4-l">
+                        <div
+                            class="cover pv5 pv6-l"
+                            style="
+                                background: black
+                                    url(http://mrmrs.github.io/photos/u/001.jpg)
+                                    center;
+                            "
+                        ></div>
+                    </div> -->
+
+
+                </div>
+            </div>
+        </main>
+
+        <section class="mw7 center avenir">
+            <h2 class="baskerville fw1 ph3 ph0-l">Featured Articles</h2>
+            <article class="bt bb b--black-10">
+                <a class="db pv4 ph3 ph0-l no-underline black dim" href="https://heyzine.com/flip-book/6de8b6ac08.html#page/26">
+                    <div class="flex flex-column flex-row-ns">
+                        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+                            <img
+                                src="https://images.unsplash.com/photo-1581091870621-8d785d0f3d5a"https://images.unsplash.com/photo-1612833944754-4b3b3b3b3b3b"
+                                class="db"
+                                alt="Superb Owl"
+                            />
+                        </div>
+                        <div class="w-100 w-60-ns pl3-ns">
+                            <h1 class="f3 fw1 baskerville mt0 lh-title">
+                                The Economics and Legacy of Super Bowl Adverts
+                            </h1>
+                            <p class="f6 f5-l lh-copy">
+                                Discover how brands spend jaw-dropping amounts on Super Bowl ads to dominate the airwaves and why these commercials leave an unforgettable mark on culture.
+                            </p>
+                            <p class="f6 lh-copy mv0">By Kanv Dhandhania</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bb b--black-10">
+                <a class="db pv4 ph3 ph0-l no-underline black dim" href="https://heyzine.com/flip-book/6de8b6ac08.html#page/29">
+                    <div class="flex flex-column flex-row-ns">
+                        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+                            <img
+                                src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
+                                class="db"
+                                alt="Photo"
+                            />
+                        </div>
+                        <div class="w-100 w-60-ns pl3-ns">
+                            <h1 class="f3 fw1 baskerville mt0 lh-title">
+                                Rearranging the Shelf: The Future of Physical Retail in a Digital India
+                            </h1>
+                            <p class="f6 f5-l lh-copy">
+                                How retailers are innovating to stay relevant, blending technology with tradition, and redefining customer experiences to thrive in an increasingly online-first market.
+                            </p>
+                            <p class="f6 lh-copy mv0">By Madhav Wadhwani</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <article class="bb b--black-10">
+                <a class="db pv4 ph3 ph0-l no-underline black dim" href="https://heyzine.com/flip-book/6de8b6ac08.html#page/9">
+                    <div class="flex flex-column flex-row-ns">
+                        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+                            <img
+                                src="https://justiceaction.org.au/wp-content/uploads/2020/09/iStock-639896942.jpg"
+                                class="db"
+                                alt="Photo"
+                            />
+                        </div>
+                        <div class="w-100 w-60-ns pl3-ns">
+                            <h1 class="f3 fw1 baskerville mt0 lh-title">
+                                Data Driven Diagnosis: Profits in the Pulse of Modern Healthcare
+                            </h1>
+                            <p class="f6 f5-l lh-copy">
+                                Advanced data analytics is revolutionizing healthcare, turning patient insights into profitability. Read about the intersection of technology, precision medicine, and business
+                            </p>
+                            <p class="f6 lh-copy mv0">By Pratyusha Gupta</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </section>
+    </body>
+</html>
